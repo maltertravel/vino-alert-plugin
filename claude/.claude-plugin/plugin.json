@@ -1,7 +1,7 @@
 {
     "name": "vino-alert",
     "displayName": "Vino Alert",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Live wine prices across curated retailers: what a wine costs right now, where it is cheapest, whether it is a deal, and the best-priced wines at a given store.",
     "author": {
         "name": "Vino Alert",

@@ -3,10 +3,9 @@
 Vino Alert for Claude and ChatGPT: live wine prices across curated retailers, what
 a wine costs right now, where it is cheapest, whether it is a deal, and the
 best-priced wines at a given store. Both plugins connect to the same open MCP
-server, `https://api.vinoalert.com/mcp/`, which needs no account or sign-in. The
-Claude plugin also bundles a `wine-prices` skill; the ChatGPT package is the MCP
-server alone, because OpenAI's skill review does not approve alcohol-focused
-skills for broad discovery.
+server, `https://api.vinoalert.com/mcp/`, which needs no account or sign-in, and
+nothing else: the server's own instructions and tool descriptions tell the
+assistant how to use it, so both platforms behave the same.
 
 | Folder | For | Submitted as |
 |---|---|---|
@@ -27,7 +26,8 @@ Check locally with `claude plugin validate ./claude`.
 
 ## ChatGPT
 
-1. Run `./build-chatgpt.sh`, which writes `dist/vino-alert-chatgpt.zip`.
+1. Zip the **contents** of `chatgpt/` (select the files inside it, not the folder,
+   so `plugin.json` sits at the root of the ZIP).
 2. At [platform.openai.com/plugins](https://platform.openai.com/plugins), select
    **Upload new or existing plugin** and upload the ZIP.
 3. Under **MCPs**, connect the server and complete domain verification by

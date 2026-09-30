@@ -19,10 +19,6 @@ No account, key or sign-in is needed.
     state.
   - `find_store_deals`: the best-priced wines at one store right now, optionally
     narrowed by grape, region, country, type or price.
-- **The `wine-prices` skill**, which tells Claude when to use those tools and how
-  to answer: lead with the lowest price and its link, say how many retailers it is
-  based on and when it was verified, and flag in-bond, pre-arrival and case-only
-  listings.
 
 ## Try it
 
