@@ -25,7 +25,7 @@
                 "shortDescription": "Compare wine prices at stores",
                 "longDescription": "Vino Alert is a wine price comparison tool. It tracks live prices from curated wine retailers so you can see what a bottle costs right now, which store has the lowest price, and whether that price is a good deal compared with what other stores typically charge.\n\nAsk about any wine by name, or share a photo of a label or a wine list, and get the lowest price with a link to the store, how many retailers carry it, and when the price was last checked. You can narrow results to one vintage or bottle size, or to stores that ship to your country or US state. If you are at or shop at a particular store, ask for its best-priced wines, optionally by grape, region, country, type or price.\n\nNo account or sign-in is needed. Vino Alert only reads public prices: it does not sell wine, place orders or take payments, and buying happens on the retailer's own site. Prices are each retailer's online listing per bottle, before shipping and tax, and a shelf price in a shop can differ.",
                 "developerName": "Vino Alert",
-                "category": "Productivity",
+                "category": "Other",
                 "capabilities": [
                     "Search wines",
                     "Compare wine prices",
