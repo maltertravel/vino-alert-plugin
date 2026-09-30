@@ -22,8 +22,8 @@
         "com.openai": {
             "interface": {
                 "displayName": "Vino Alert",
-                "shortDescription": "Live wine prices and deals",
-                "longDescription": "Vino Alert tracks live listings from curated wine retailers. Ask what a wine costs right now and get the lowest price, the store and its link, how many retailers carry it, when the price was last verified, and whether it sits under what stores typically charge. Share a photo of a label or a wine list and ChatGPT reads it and looks each wine up. At a store, ask for its best-priced wines, narrowed by grape, region, country, type or price.\n\nNo account or sign-in is needed. Vino Alert only reads public prices: it cannot buy wine, place orders or set up price alerts from the chat (alerts are on vinoalert.com). Prices are each retailer's own online listing per bottle, before shipping and tax, and a shelf price in a shop can differ.",
+                "shortDescription": "Compare wine prices at stores",
+                "longDescription": "Vino Alert is a wine price comparison tool. It tracks live prices from curated wine retailers so you can see what a bottle costs right now, which store has the lowest price, and whether that price is a good deal compared with what other stores typically charge.\n\nAsk about any wine by name, or share a photo of a label or a wine list, and get the lowest price with a link to the store, how many retailers carry it, and when the price was last checked. You can narrow results to one vintage or bottle size, or to stores that ship to your country or US state. If you are at or shop at a particular store, ask for its best-priced wines, optionally by grape, region, country, type or price.\n\nNo account or sign-in is needed. Vino Alert only reads public prices: it does not sell wine, place orders or take payments, and buying happens on the retailer's own site. Prices are each retailer's online listing per bottle, before shipping and tax, and a shelf price in a shop can differ.",
                 "developerName": "Vino Alert",
                 "category": "Productivity",
                 "capabilities": [
