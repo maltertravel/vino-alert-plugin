@@ -1,0 +1,15 @@
+{
+    "name": "vino-alert",
+    "displayName": "Vino Alert",
+    "version": "1.0.0",
+    "description": "Live wine prices across curated retailers: what a wine costs right now, where it is cheapest, whether it is a deal, and the best-priced wines at a given store.",
+    "author": {
+        "name": "Vino Alert",
+        "email": "support@vinoalert.com",
+        "url": "https://vinoalert.com"
+    },
+    "homepage": "https://vinoalert.com/connect/",
+    "repository": "https://github.com/maltertravel/vino-alert-plugin",
+    "license": "MIT",
+    "keywords": ["wine", "prices", "deals", "shopping", "retail"]
+}

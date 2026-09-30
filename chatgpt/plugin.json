@@ -1,0 +1,95 @@
+{
+    "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+    "name": "vino-alert",
+    "version": "1.0.0",
+    "description": "Live wine prices across curated retailers: what a wine costs right now, where it is cheapest, whether it is a deal, and the best-priced wines at a given store.",
+    "author": {
+        "name": "Vino Alert",
+        "email": "support@vinoalert.com",
+        "url": "https://vinoalert.com"
+    },
+    "homepage": "https://vinoalert.com/connect/",
+    "repository": "https://github.com/maltertravel/vino-alert-plugin",
+    "license": "MIT",
+    "keywords": ["wine", "prices", "deals", "shopping", "retail"],
+    "extensions": {
+        "com.openai": {
+            "interface": {
+                "displayName": "Vino Alert",
+                "shortDescription": "Live wine prices and deals",
+                "longDescription": "Vino Alert tracks live listings from curated wine retailers. Ask what a wine costs right now and get the lowest price, the store and its link, how many retailers carry it, when the price was last verified, and whether it sits under what stores typically charge. Share a photo of a label or a wine list and ChatGPT reads it and looks each wine up. At a store, ask for its best-priced wines, narrowed by grape, region, country, type or price.\n\nNo account or sign-in is needed. Vino Alert only reads public prices: it cannot buy wine, place orders or set up price alerts from the chat (alerts are on vinoalert.com). Prices are each retailer's own online listing per bottle, before shipping and tax, and a shelf price in a shop can differ.",
+                "developerName": "Vino Alert",
+                "category": "Shopping",
+                "capabilities": ["Search wines", "Compare wine prices", "Find store deals"],
+                "websiteURL": "https://vinoalert.com/connect/",
+                "supportURL": "https://vinoalert.com/contact/",
+                "privacyPolicyURL": "https://vinoalert.com/legal/privacy-policy/",
+                "termsOfServiceURL": "https://vinoalert.com/legal/terms-of-service/",
+                "defaultPrompt": [
+                    "What does Ridge Three Valleys 2021 cost right now?",
+                    "Is $170 a good price for 2020 Caymus Special Selection?",
+                    "I'm at Astor Wines. What are the best deals on Riesling?"
+                ],
+                "brandColor": "#800000",
+                "composerIcon": "./assets/icon.png",
+                "logo": "./assets/icon.png"
+            },
+            "onboardingSkill": "./skills/wine-prices/SKILL.md",
+            "review": {
+                "test_cases": {
+                    "positive": [
+                        {
+                            "description": "Price a named wine and vintage",
+                            "prompt": "What does Ridge Three Valleys 2021 cost right now?",
+                            "tools_triggered": "search_wines, get_wine_prices",
+                            "expected_behavior": "Finds Ridge Three Valleys, then returns the 2021 listings with the lowest price, its store and link, the retailer count and when the price was last verified."
+                        },
+                        {
+                            "description": "Judge whether a price is a deal",
+                            "prompt": "Is $170 a good price for 2020 Caymus Special Selection?",
+                            "tools_triggered": "search_wines, get_wine_prices",
+                            "expected_behavior": "Returns the 2020 Caymus Special Selection lowest price, the typical price across retailers and the retailer count, and says whether $170 is above or below typical."
+                        },
+                        {
+                            "description": "Look up a wine from label text",
+                            "prompt": "The label says Domaine Tempier Bandol Rosé 2023. Where is it cheapest?",
+                            "tools_triggered": "search_wines, get_wine_prices",
+                            "expected_behavior": "Matches the label to Tempier Bandol Rosé and lists the 2023 listings sorted by price with store links, or says which vintages are in stock if 2023 is not."
+                        },
+                        {
+                            "description": "Best-priced wines at one store",
+                            "prompt": "I'm at Astor Wines. What are the best deals on Riesling?",
+                            "tools_triggered": "find_store_deals",
+                            "expected_behavior": "Lists Rieslings in stock at Astor Wines with each price, store link, typical price and retailer count, and marks which are under typical."
+                        },
+                        {
+                            "description": "Narrow to stores that ship to a state",
+                            "prompt": "Which stores that ship to California have Caymus Special Selection, and what's the cheapest?",
+                            "tools_triggered": "search_wines, get_wine_prices",
+                            "expected_behavior": "Calls get_wine_prices with country US and state CA and reports the lowest price among stores that ship to California, with the store and link."
+                        }
+                    ],
+                    "negative": [
+                        {
+                            "description": "Purchase request",
+                            "prompt": "Buy two bottles of Caymus Special Selection for me and ship them to my house."
+                        },
+                        {
+                            "description": "Price alert request",
+                            "prompt": "Set up an alert to text me when Opus One drops under $300."
+                        },
+                        {
+                            "description": "Unrelated request",
+                            "prompt": "What's the current price of Tesla stock?"
+                        }
+                    ]
+                },
+                "commerce": false,
+                "commerce_description": "Vino Alert does not sell products or process payments. It shows retailers' public prices and links to their own listings."
+            },
+            "publication": {
+                "release_notes": "Initial release: wine search, live prices across retailers, deal checks and store deals."
+            }
+        }
+    }
+}
