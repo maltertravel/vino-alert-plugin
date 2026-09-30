@@ -11,7 +11,13 @@
     "homepage": "https://vinoalert.com/connect/",
     "repository": "https://github.com/maltertravel/vino-alert-plugin",
     "license": "MIT",
-    "keywords": ["wine", "prices", "deals", "shopping", "retail"],
+    "keywords": [
+        "wine",
+        "prices",
+        "deals",
+        "shopping",
+        "retail"
+    ],
     "extensions": {
         "com.openai": {
             "interface": {
@@ -20,7 +26,11 @@
                 "longDescription": "Vino Alert tracks live listings from curated wine retailers. Ask what a wine costs right now and get the lowest price, the store and its link, how many retailers carry it, when the price was last verified, and whether it sits under what stores typically charge. Share a photo of a label or a wine list and ChatGPT reads it and looks each wine up. At a store, ask for its best-priced wines, narrowed by grape, region, country, type or price.\n\nNo account or sign-in is needed. Vino Alert only reads public prices: it cannot buy wine, place orders or set up price alerts from the chat (alerts are on vinoalert.com). Prices are each retailer's own online listing per bottle, before shipping and tax, and a shelf price in a shop can differ.",
                 "developerName": "Vino Alert",
                 "category": "Shopping",
-                "capabilities": ["Search wines", "Compare wine prices", "Find store deals"],
+                "capabilities": [
+                    "Search wines",
+                    "Compare wine prices",
+                    "Find store deals"
+                ],
                 "websiteURL": "https://vinoalert.com/connect/",
                 "supportURL": "https://vinoalert.com/contact/",
                 "privacyPolicyURL": "https://vinoalert.com/legal/privacy-policy/",
@@ -34,7 +44,6 @@
                 "composerIcon": "./assets/icon.png",
                 "logo": "./assets/icon.png"
             },
-            "onboardingSkill": "./skills/wine-prices/SKILL.md",
             "review": {
                 "test_cases": {
                     "positive": [

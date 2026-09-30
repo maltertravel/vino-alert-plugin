@@ -9,7 +9,14 @@
         "url": "https://vinoalert.com"
     },
     "homepage": "https://vinoalert.com/connect/",
+    "privacyPolicyUrl": "https://vinoalert.com/legal/privacy-policy/",
     "repository": "https://github.com/maltertravel/vino-alert-plugin",
     "license": "MIT",
-    "keywords": ["wine", "prices", "deals", "shopping", "retail"]
+    "keywords": [
+        "wine",
+        "prices",
+        "deals",
+        "shopping",
+        "retail"
+    ]
 }

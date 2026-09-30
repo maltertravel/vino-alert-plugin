@@ -3,17 +3,16 @@
 Vino Alert for Claude and ChatGPT: live wine prices across curated retailers, what
 a wine costs right now, where it is cheapest, whether it is a deal, and the
 best-priced wines at a given store. Both plugins connect to the same open MCP
-server, `https://api.vinoalert.com/mcp/`, which needs no account or sign-in, and
-bundle the same `wine-prices` skill.
+server, `https://api.vinoalert.com/mcp/`, which needs no account or sign-in. The
+Claude plugin also bundles a `wine-prices` skill; the ChatGPT package is the MCP
+server alone, because OpenAI's skill review does not approve alcohol-focused
+skills for broad discovery.
 
 | Folder | For | Submitted as |
 |---|---|---|
 | `claude/` | Claude (web, desktop, mobile, Cowork, Claude Code) | Plugin bundle from this GitHub repo, path `claude` |
 | `chatgpt/` | ChatGPT and Codex | ZIP uploaded to platform.openai.com/plugins |
 | `assets/` | Source icon (SVG and 1024px PNG) | |
-
-The skill lives in both folders because each platform installs only its own
-folder. Edit `claude/skills/wine-prices/SKILL.md` and copy it to `chatgpt/`.
 
 ## Claude
 
