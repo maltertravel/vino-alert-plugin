@@ -93,6 +93,7 @@
                         }
                     ]
                 },
+                "demo_recording_url": "https://cdn.vinoalert.com/review/vino-alert-chatgpt-walkthrough.mp4",
                 "commerce": false,
                 "commerce_description": "Vino Alert does not sell products or process payments. It shows retailers' public prices and links to their own listings."
             },
