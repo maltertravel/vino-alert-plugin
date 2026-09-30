@@ -11,15 +11,15 @@ public prices; they never buy anything or change anything.
 ## Price a wine
 
 1. Call `search_wines` with the producer and wine name as written on the label
-   ("Ridge Three Valleys 2021"). For a photo, read the label and pass what it says.
+   ("Ridge Three Valleys 2021"). For a photo, read the label and send what it says.
    A year in the query is lifted out and returned as `vintage_hint`.
 2. Pick the result that is the same wine. If two results are plausibly the same
    bottle (for example a Riserva and the regular bottling), ask which one rather
    than guessing. If nothing matches, try fewer words: the producer and the main
    name.
-3. Call `get_wine_prices` with the wine's `id`, and pass `vintage` when the user
+3. Call `get_wine_prices` with the wine's `id`, and add `vintage` when the user
    named one (or `vintage_hint` was returned). If the user says where they live,
-   pass `country`, and `state` for the US, so only stores that ship there count.
+   give `country`, and `state` for the US, so only stores that ship there count.
 
 ## Answer
 
@@ -44,5 +44,5 @@ store's closest to typical, not deals; say so.
 ## Limits
 
 Vino Alert cannot buy wine, hold stock, or set up price alerts from the chat.
-For alerts, point the user to https://vinoalert.com. Listings are the retailers'
+For alerts, point the user to the Vino Alert website. Listings are the retailers'
 own online prices; a shelf price in a shop can differ.
