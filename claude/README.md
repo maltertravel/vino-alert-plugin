@@ -11,7 +11,7 @@ No account, key or sign-in is needed.
 ## What it includes
 
 - **The Vino Alert connector**, a remote MCP server at
-  `https://api.vinoalert.com/mcp/` with three read-only tools:
+  `https://api.vinoalert.com/mcp/` with four read-only tools:
   - `search_wines`: find a wine by producer, name, vintage or label text.
   - `get_wine_prices`: current listings for one wine, sorted by price, with the
     typical price, retailer count and whether the lowest is a deal. Optionally
@@ -19,12 +19,17 @@ No account, key or sign-in is needed.
     state.
   - `find_store_deals`: the best-priced wines at one store right now, optionally
     narrowed by grape, region, country, type or price.
+  - `search_store`: everything one store has in stock whose name matches your
+    words (a producer, a cuvee, a style such as Spatlese), with the store's price
+    against the typical price, optionally narrowed by grape, region, country,
+    type or price, a page at a time.
 
 ## Try it
 
 - "What does Ridge Three Valleys 2021 cost right now?"
 - "Is $170 a good price for 2020 Caymus Special Selection?"
 - "I'm at Astor Wines. What are the best deals on Riesling?"
+- "Show me every Barolo at K&L under $80."
 - Send a photo of a label: "Where is this cheapest?"
 
 ## What it sends and fetches

@@ -11,13 +11,15 @@ assistant how to use it, so both platforms behave the same.
 |---|---|---|
 | `claude/` | Claude (web, desktop, mobile, Cowork, Claude Code) | Plugin bundle from this GitHub repo, path `claude` |
 | `chatgpt/` | ChatGPT and Codex | ZIP uploaded to platform.openai.com/plugins |
-| `assets/` | Source icon (SVG and 1024px PNG) | |
+
+The icon is `claude/.claude-plugin/icon.svg`, with its 1024px PNG at
+`chatgpt/assets/icon.png`.
 
 ## Claude
 
 1. At [claude.ai/directory/manage](https://claude.ai/directory/manage), submit
    an **MCP connector** first: URL `https://api.vinoalert.com/mcp/`,
-   authentication **None**, icon `assets/icon.png`.
+   authentication **None**, icon `chatgpt/assets/icon.png`.
 2. Then submit a **Plugin bundle**: this repository, plugin path `claude`. The
    repository must be public before the listing goes live.
 3. Pair the plugin with the connector in the portal.
